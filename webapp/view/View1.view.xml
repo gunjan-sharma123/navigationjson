@@ -1,0 +1,31 @@
+<mvc:View controllerName="com.nav.navigationjson.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+					<Table class="sapUiSizeCompact" id="table1" includeItemInSelection="true" items="{path: 'DataModel>/Objects'}" mode="MultiSelect"
+						selectionChange="onselectionChange">
+						<columns>
+							<Column>
+								<Label text="Product Name"/>
+							</Column>
+							<Column>
+								<Label text="Supplier"/>
+							</Column>
+							<Column>
+								<Label text="Price"/>
+							</Column>
+							<Column>
+								<Label text="Units Ordered"/>
+							</Column>
+						</columns>
+						<ColumnListItem press="onPress" type="Navigation">
+							<Text text="{DataModel>Name}"></Text>
+							<Text text="{DataModel>Supplier}"></Text>
+							<Text text="{DataModel>Price}"></Text>
+							<Text text="{DataModel>Units}"></Text>
+						</ColumnListItem>
+					</Table>
+				</content>
+    </Page>
+</mvc:View>

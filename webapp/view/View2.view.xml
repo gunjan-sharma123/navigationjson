@@ -1,0 +1,32 @@
+<mvc:View controllerName="com.nav.navigationjson.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page navButtonPress="onNavBack" showNavButton="true" title="Tableview2">
+				<content>
+					<Table class="sapUiSizeCompact" id="abc" items="{path: 'navigationModel>/Objects'}">
+						<columns>
+							<Column width="11rem">
+								<Label text="Product Name"/>
+							</Column>
+							<Column width="11rem">
+								<Label text="Supplier"/>
+							</Column>
+							<Column hAlign="End" width="6rem">
+								<Label text="Price"/>
+							</Column>
+							<Column hAlign="End" width="15rem">
+								<Label text="Units Ordered"/>
+							</Column>
+						</columns>
+						<ColumnListItem press="onPress" type="Navigation">
+							<Text text="{navigationModel>Name}"></Text>
+							<Text text="{navigationModel>Supplier}"></Text>
+							<Text text="{navigationModel>Price}"></Text>
+							<Text text="{navigationModel>Units}"></Text>
+						</ColumnListItem>
+					</Table>
+				</content>
+			</Page>
+
+</mvc:View>
